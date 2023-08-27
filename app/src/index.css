@@ -1,0 +1,87 @@
+body {
+  background: #000000;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  color: #fff;
+  -webkit-app-region: drag;
+}
+
+#header {
+  display: flex;
+  margin-left: 10px;
+}
+
+#actionBtns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  width: 100%;
+  margin-right: 15px;
+}
+
+.appBtns {
+  width: 15px;
+  height: 15px;
+
+  margin-left: 5px;
+
+  background-color: transparent;
+  border: none;
+
+  -webkit-app-region: none;
+}
+
+.appBtns:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.appBtns:active {
+  cursor: pointer;
+  opacity: 0.5;
+  scale: 0.9;
+}
+
+#mainContainer {
+  position: absolute;
+
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 630px;
+  height: 273px;
+
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #121212 0%, #1E1E1E 100%);
+}
+
+#searchBar {
+  position: absolute;
+
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 462px;
+  height: 41px;
+  border-radius: 50px;
+
+  background: #242424 url('recourses/icons/Search.png') no-repeat 15px center;
+
+  outline: none;
+  border: none;
+
+  padding-left: 40px;
+}
+
+#searchBar:hover {
+  border: 2px solid #888;
+}
+
+#searchBar:focus {
+  border: 3px solid #fff;
+}
