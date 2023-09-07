@@ -1,3 +1,8 @@
+@font-face {
+  font-family: GothamMedium;
+  src: url(recourses/fonts/spotify/GothamMedium.ttf);
+}
+
 body {
   background: #000000;
   justify-content: center;
@@ -5,6 +10,7 @@ body {
   user-select: none;
   color: #fff;
   -webkit-app-region: drag;
+  font-family: GothamMedium;
 }
 
 #header {
@@ -47,7 +53,7 @@ body {
 #mainContainer {
   position: absolute;
 
-  top: 55%;
+  top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -71,6 +77,8 @@ body {
   border-radius: 50px;
 
   background: #242424 url('recourses/icons/Search.png') no-repeat 15px center;
+  color: #fff;
+  font-family: GothamMedium;
 
   outline: none;
   border: none;
@@ -79,9 +87,9 @@ body {
 }
 
 #searchBar:hover {
-  border: 2px solid #888;
+  border: 1px solid #888;
 }
 
 #searchBar:focus {
-  border: 3px solid #fff;
+  border: 2px solid #fff;
 }
