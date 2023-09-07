@@ -62,13 +62,13 @@ body {
 
   flex-shrink: 0;
   border-radius: 20px;
-  background: linear-gradient(180deg, #121212 0%, #1E1E1E 100%);
+  background: linear-gradient(360deg, #121212 0%, #1E1E1E 100%);
 }
 
 #searchBar {
   position: absolute;
 
-  top: 55%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -92,4 +92,79 @@ body {
 
 #searchBar:focus {
   border: 2px solid #fff;
+}
+
+:root {
+  --light: #d8dbe0;
+  --dark: #242424;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+}
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 200px;
+}
+
+label {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  top: 35px;
+  left: 100%;
+  background-color: var(--dark);
+  border-radius: 50px;
+  cursor: pointer;
+  scale: 0.75;
+}
+
+label:hover {
+  border: 1px solid #888;
+}
+
+label:active {
+  border: 2px solid #fff;
+}
+
+#aux1 {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+#aux1:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 16px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  transition: 0.5s;
+  background: #fff url('recourses/icons/Spotify.png') no-repeat center;
+}
+
+input:checked ~ .slider::before {
+  transform: translateX(95px) rotate(360deg);
+
+  background: #fff url('recourses/icons/soundcloud.png') no-repeat center;
+
+  background-color: var(--dark);
+  box-shadow: none;
 }
