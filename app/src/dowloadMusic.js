@@ -1,11 +1,17 @@
-const searchBar = document.getElementById("searchBar");
+function runPythonScript(inputText) {
+  ipcRenderer.send('run-python-script', inputText);
+}
 
-searchBar.addEventListener("keydown", function(event) {
-  if (event.key === "Enter") {
-    const inputValue = searchBar.value;
-    const xhr = new XMLHttpRequest();
-    xhr.open("POST", "your-python-file.py", true);
-    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    xhr.send(JSON.stringify({inputValue}));
+// Expose the `runPythonScript` function to the renderer process
+window.runPythonScript = runPythonScript;
+
+// Get the input element
+const inputElement = document.getElementById('input');
+
+// Add an event listener for the enter key
+inputElement.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    const inputText = inputElement.value;
+    runPythonScript(inputText);
   }
 });

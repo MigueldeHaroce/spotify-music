@@ -2,12 +2,9 @@ import spotipy, ffmpeg, os, re
 from spotipy.oauth2 import SpotifyClientCredentials
 from pytube import YouTube
 from pytube import Search
-import PySimpleGUI as sg
 import threading as th
 import json
 
-data = json.loads(input())
-input_value = data["inputValue"]
 # Do something with inputValue
 
 client_id = "11c85887b3b84bebb1d123fcac478478"
@@ -56,6 +53,5 @@ def download_playlist(playlist_uri):
         except Exception as e:
             print(f"Error: {e} occurred while downloading {song}.")
 
-    sg.Popup('Download complete! The songs are saved on downloads.', title='Success')
 
 download_playlist(input_value)

@@ -1,4 +1,5 @@
 const { app, ipcMain, BrowserWindow } = require('electron');
+const { spawn } = require('child_process');
 const path = require('path');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -50,6 +51,22 @@ ipcMain.on("close", () =>{
 
 ipcMain.on("minimize", () =>{
   BrowserWindow.getFocusedWindow().minimize();
+});
+
+ipcMain.on('run-python-script', (event, arg) => {
+  const pythonProcess = spawn('python', ['main.py']);
+
+  pythonProcess.stdout.on('data', (data) => {
+    console.log(`stdout: ${data}`);
+  });
+
+  pythonProcess.stderr.on('data', (data) => {
+    console.error(`stderr: ${data}`);
+  });
+
+  pythonProcess.on('close', (code) => {
+    console.log(`child process exited with code ${code}`);
+  });
 });
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
