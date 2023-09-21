@@ -70,7 +70,7 @@ def find_youtube(query):
     phrase = query.replace(" ", "+")
     search_link = "https://www.youtube.com/results?search_query=" + phrase
     count = 0
-    while count < 15:
+    while count < 5:
         try:
             response = urllib.request.urlopen(search_link)
             search_results = re.findall(r"watch\?v=(\S{11})", response.read().decode())
