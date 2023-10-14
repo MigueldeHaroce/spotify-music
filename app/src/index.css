@@ -151,7 +151,7 @@ label:active {
 .slider::before {
   content: "";
   position: absolute;
-  top: 13px;
+  top: 10px;
   left: 16px;
   width: 75px;
   height: 75px;
