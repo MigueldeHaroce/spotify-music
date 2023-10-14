@@ -161,9 +161,10 @@ label:active {
 }
 
 input:checked ~ .slider::before {
-  transform: translateX(95px) rotate(360deg);
+  transform: translateX(95px) rotate(360deg) sca;
 
   background: #fff url('recourses/icons/yt.png') no-repeat center;
 
+  background-color: var(--dark);
   box-shadow: none;
 }
