@@ -3,8 +3,22 @@
   src: url(recourses/fonts/spotify/GothamMedium.ttf);
 }
 
+:root {
+  --light: #d8dbe0;
+  --dark: #101010;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+
+  --dark_dark: #000000;
+
+  --light_yt: #fff;
+  --dark_yt: #181818;
+  --link_yt: #c4302b;
+  --link_hover_yt: #c4302b;
+}
+
 body {
-  background: #000000;
+  background: var(--dark_dark);
   justify-content: center;
   align-items: center;
   user-select: none;
@@ -62,7 +76,7 @@ body {
 
   flex-shrink: 0;
   border-radius: 20px;
-  background: linear-gradient(360deg, #121212 0%, #1E1E1E 100%);
+  background-color: rgb(24, 94, 82);
 }
 
 #searchBar {
@@ -76,7 +90,7 @@ body {
   height: 41px;
   border-radius: 50px;
 
-  background: #242424 url('recourses/icons/Search.png') no-repeat 15px center;
+  background: #101010 url('recourses/icons/Search.png') no-repeat 15px center;
   color: #fff;
   font-family: GothamMedium;
 
@@ -92,14 +106,10 @@ body {
 
 #searchBar:focus {
   border: 2px solid #fff;
+
 }
 
-:root {
-  --light: #d8dbe0;
-  --dark: #242424;
-  --link: rgb(27, 129, 112);
-  --link-hover: rgb(24, 94, 82);
-}
+
 
 * {
   padding: 0;
@@ -146,9 +156,10 @@ label:active {
 
 #aux1:checked ~ .slider {
   background-color: var(--light);
+
 }
 
-.slider::before {
+.slider::before{
   content: "";
   position: absolute;
   top: 10px;
@@ -158,15 +169,17 @@ label:active {
   border-radius: 50%;
   transition: 0.5s;
   background: #fff url('recourses/icons/Spotify.png') no-repeat center;
+
 }
 
 input:checked ~ .slider::before {
   transform: translateX(95px) rotate(360deg);
-  border: 3px solid #000;
+  border: 3px solid #181818;
 
   background: #fff url('recourses/icons/yt.png') no-repeat center;
   background-size: 70%; /* Adjust this value to scale the image */
 
   background-color: #fff;
   box-shadow: none;
+
 }
