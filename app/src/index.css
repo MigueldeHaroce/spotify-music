@@ -165,7 +165,7 @@ input:checked ~ .slider::before {
   border: 3px solid #000;
 
   background: #fff url('recourses/icons/yt.png') no-repeat center;
-  background-size: 50%; /* Adjust this value to scale the image */
+  background-size: 70%; /* Adjust this value to scale the image */
 
   background-color: #fff;
   box-shadow: none;
