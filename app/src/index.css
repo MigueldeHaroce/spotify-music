@@ -163,7 +163,7 @@ label:active {
 input:checked ~ .slider::before {
   transform: translateX(95px) rotate(360deg);
 
-  background: #fff url('recourses/icons/soundcloud.png') no-repeat center;
+  background: #fff url('recourses/icons/yt.png') no-repeat center;
 
   background-color: var(--dark);
   box-shadow: none;
