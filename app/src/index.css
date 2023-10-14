@@ -166,6 +166,8 @@ input:checked ~ .slider::before {
 
   background: #fff url('recourses/icons/yt.png') no-repeat center / 75%;
 
+  top: 1px;
+
   background-color: #fff;
   box-shadow: none;
 }
