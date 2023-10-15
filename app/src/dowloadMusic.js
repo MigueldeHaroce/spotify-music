@@ -6,12 +6,12 @@ function runPythonScript(inputText) {
 window.runPythonScript = runPythonScript;
 
 // Get the input element
-const inputElement = document.getElementById('input');
+const inputElement = document.getElementById('searchBar');
 
 // Add an event listener for the enter key
 inputElement.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
     const inputText = inputElement.value;
-    runPythonScript(inputText);
+    console.log('Sending input text to main process: ' + inputText);
   }
 });
