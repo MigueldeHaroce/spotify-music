@@ -8,8 +8,8 @@ import threading as th
 from mutagen.easyid3 import EasyID3
 from mutagen.id3 import APIC, ID3
 
-client_id = "11c85887b3b84bebb1d123fcac478478"
-client_secret = "8a0d1a1bedc24696ae4a152d477391bd"
+client_id = ""
+client_secret = ""
 
 # Authenticate with the Spotify API using client credentials
 auth_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
